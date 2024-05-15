@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        .gender-inputs {
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Sign Up</h2>
+    <form id="signupForm" action="#" method="post" enctype="multipart/form-data">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="full name" required><br><br>
+
+        <label for="email">email:</label><br>
+        <input type="email" id="email" name="email" placeholder="gmail id" required><br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" placeholder="8 characters"required><br><br>
+
+        <label for="confirm_password">Confirm Password:</label><br>
+        <input type="password" id="confirm_password" name="confirm_password" placeholder="8 characters" required><br><br>
+
+        <label for="dob">Date Of Birth:</label><br>
+        <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" required><br><br>
+
+        <label>Gender:</label><br>
+        <div class="gender-inputs">
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label>
+
+            <input type="radio" id="other" name="gender" value="other" required>
+            <label for="other">Other</label>
+        </div><br><br>
+
+        <label for="photo">Insert your photo:</label><br>
+        <input type="file" id="photo" name="photo" accept="image/*" required><br><br>
+
+        <label for="resume">Insert your resume:</label><br>
+        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required><br><br>
+
+        <label for="security_question">Security Question:</label><br>
+        <select id="security_question" name="security_question" required>
+            <option value="" disabled selected>Select </option>
+            <!-- Add options for security questions here -->
+        </select><br><br>
+
+        <input type="checkbox" id="terms_conditions" name="terms_conditions" required>
+        <label for="terms_conditions">I agree terms and conditions</label><br><br>
+
+        <input type="submit" value="Register">
+    </form>
+
+    
+</body>
+</html>

@@ -1,0 +1,9 @@
+Steps for Synchronization in Java Threads:
+
+ 1.Create a Shared Resource Class (Counter):
+
+2.Create a class (Counter in this example) that represents the shared resource. This class contains methods that need to be synchronized. Synchronize Methods:In the shared resource class (Counter), mark the methods that access shared data with the synchronized keyword. In this example, increment() and getCount() methods are synchronized. 
+
+3.Create Thread Class (MyThread): Create a class (MyThread in this example) that extends Thread or implements Runnable. This class will have a reference to the shared resource (Counter in this example). Access Shared Resource Safely: In the run() method of the thread class, call the synchronized methods of the shared resource. In this example, the run() method of MyThread calls the increment() method of Counter. Create and Start Threads: In the main method, create instances of the thread class (MyThread). 
+
+4. Pass the shared resource (Counter) to each thread during creation. Start Threads: Call start() method on each thread object to start the execution of threads. Join Threads: Optionally, call join() on each thread object to wait for threads to complete execution. This ensures that the main thread waits for all other threads to finish before continuing. Access Final Result: After threads complete execution, access the final result or state of the shared resource. In this example, main method prints the final value of the counter after threads finish.
